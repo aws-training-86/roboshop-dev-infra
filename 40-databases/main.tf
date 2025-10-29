@@ -25,17 +25,17 @@ resource "terraform_data" "mongodb" {
   }
 
   # terraform copies this file to mongodb server
-#   provisioner "file" {
-#     source = "bootstrap.sh"
-#     destination = "/tmp/bootstrap.sh"
-#   }
+  provisioner "file" {
+    source = "bootstrap.sh"
+    destination = "/tmp/bootstrap.sh"
+  }
 
   provisioner "remote-exec" {
     inline = [
-        # "chmod +x /tmp/bootstrap.sh",
-        # # "sudo sh /tmp/bootstrap.sh"
+        "chmod +x /tmp/bootstrap.sh",
+        "sudo sh chmod +x /tmp/bootstrap.sh"
         # "sudo sh /tmp/bootstrap.sh mongodb"
-        "echo Hello World"
+        
     ]
   }
 }
