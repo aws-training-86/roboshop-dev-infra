@@ -6,6 +6,6 @@ variable "environment" {
     default = "dev"
 }
 
-variable "domain_name" {
-    default = "daws86s.fun"
-}
+# variable "domain_name" {
+#     default = "daws86s.space"
+# }
