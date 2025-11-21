@@ -81,3 +81,5 @@ resource "aws_security_group_rule" "catalogue_backend_alb" {
   protocol          = "tcp"
   to_port           = 8080
 }
+
+
